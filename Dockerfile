@@ -1,4 +1,4 @@
-FROM yarnpkg/node-yarn:latest
+FROM node:slim
 
 LABEL "com.github.actions.name"="github-actions-nodemailer"
 LABEL "com.github.actions.description"="Github Actions to send email notifications using Nodemailer."
@@ -13,8 +13,10 @@ COPY index.js /
 
 COPY package.json /package.json
 
+COPY entrypoint.sh /entrypoint.sh
+
 COPY LICENSE README.md /
 
-RUN yarn install
+RUN yarn -v
 
-ENTRYPOINT ["node", "/index.js"]
+ENTRYPOINT ["/entrypoint.sh"]
