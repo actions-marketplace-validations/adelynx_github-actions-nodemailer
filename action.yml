@@ -1,4 +1,4 @@
-name: 'Container Action Nodemailer'
+name: 'Github Actions Nodemailer'
 description: 'Github Actions to send email notifications using Nodemailer.'
 author: 'Adel Kedjour <adel@kedjour.com>'
 branding:
@@ -6,33 +6,42 @@ branding:
   color: orange
 inputs:
     host:
-        description: 'URL of SMTP server'
-        required: true
+      description: SMTP server address
+      required: true
     port:
-        description: 'Server port'
-        required: true
+      description: SMTP server port
+      required: true
     secure:
-        description: 'is the use TLS'
-        required: false
+      description: Whether this connection use TLS (default is true if smtp server port is 465)
+      required: false      
     username:
-        description: 'Auth username: Use secret'
-        required: true
+      description: Authenticate as this user to SMTP server
+      required: true
     password:
-        description: 'Auth password: Use secret'
-        required: true
-    from:
-        description: 'Sender email address'
-        required: true
-    to:
-        description: 'Comma-separated recipient list'
-        required: true
+      description: Authenticate with this password to SMTP server
+      required: true
     subject:
-        description: 'Email subject line'
-        required: true
+      description: Subject of mail message
+      required: true
+    to:
+      description: Recipients mail addresses (separated with comma)
+      required: true
+    from:
+      description: Full name of mail sender (might be with an email address specified in <>)
+      required: true
     body:
-        description: 'Email body (Plaintext or HTML)'
-        required: true
-
+      description: Body of mail message (might be a plain text or html)
+      required: true
+    cc:
+      description: Carbon copy recipients (separated with comma)
+      required: false
+    bcc:
+      description: Blind carbon copy recipients (separated with comma)
+      required: false
+    reply_to:
+      description: An email address that will appear on the Reply-To field
+      required: false
+    
 runs:
   using: 'docker'
   image: 'Dockerfile'
