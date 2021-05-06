@@ -15,8 +15,6 @@ COPY index.js /
 
 COPY package.json /package.json
 
-COPY entrypoint.sh /entrypoint.sh
+RUN yarn install
 
-RUN chmod +x entrypoint.sh
-
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["node", "/index.js"]
