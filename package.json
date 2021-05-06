@@ -1,0 +1,15 @@
+{
+  "name": "github-actions-nodemailer",
+  "version": "1.0.0",
+  "description": "Github Actions to send email notifications using Nodemailer.",
+  "main": "index.js",
+  "repository": {
+    "url": "https://github.com/adelynx/github-actions-nodemailer",
+    "type": "git"
+  },
+  "author": "Adel Kedjour <adel@kedjour.com>",
+  "license": "MIT",
+  "dependencies": {
+    "nodemailer": "^6.6.0"
+  }
+}

@@ -1,12 +1,38 @@
-name: 'Container Action Template'
-description: 'Get started with Container actions'
-author: 'GitHub'
-inputs: 
-  myInput:
-    description: 'Input to use'
-    default: 'world'
+name: 'Container Action Nodemailer'
+description: 'Github Actions to send email notifications using Nodemailer.'
+author: 'Adel Kedjour <adel@kedjour.com>'
+branding:
+  icon: mail
+  color: orange
+inputs:
+    host:
+        description: 'URL of SMTP server'
+        required: true
+    port:
+        description: 'Server port'
+        required: true
+    secure:
+        description: 'is the use TLS'
+        required: false
+    username:
+        description: 'Auth username: Use secret'
+        required: true
+    password:
+        description: 'Auth password: Use secret'
+        required: true
+    from:
+        description: 'Sender email address'
+        required: true
+    to:
+        description: 'Comma-separated recipient list'
+        required: true
+    subject:
+        description: 'Email subject line'
+        required: true
+    body:
+        description: 'Email body (Plaintext or HTML)'
+        required: true
+
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
-    - ${{ inputs.myInput }}
