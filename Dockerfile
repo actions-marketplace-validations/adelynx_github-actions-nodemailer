@@ -15,8 +15,6 @@ COPY package.json /package.json
 
 COPY LICENSE README.md /
 
-RUN yarn global add npm@latest
-
 RUN yarn install
 
 ENTRYPOINT ["node", "/index.js"]
