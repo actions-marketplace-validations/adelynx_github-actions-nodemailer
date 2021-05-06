@@ -61,4 +61,5 @@ dist
 .vscode/
 package-lock.json
 yarn-lock.json
+yarn.lock
 server/config/production.ts
