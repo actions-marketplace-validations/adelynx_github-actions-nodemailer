@@ -27,9 +27,8 @@ function isHtml(str) {
     return /<\/?[a-z][\s\S]*>/i.test(str);
 }
 
-try {
-    // async..await is not allowed in global scope, must use a wrapper
-    async function main() {
+// async..await is not allowed in global scope, must use a wrapper
+async function main() {
     // create reusable transporter object using the default SMTP transport
     let transporter = nodemailer.createTransport(options);
 
@@ -37,10 +36,6 @@ try {
     const info = await transporter.sendMail(data);
 
     console.log("Message sent: %s", info.messageId);
-    }
-} catch (error) {
-    console.log(error.message);
-    exit;
 }
 
-main();
+main().catch;
