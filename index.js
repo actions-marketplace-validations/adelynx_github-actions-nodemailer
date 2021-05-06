@@ -38,4 +38,4 @@ async function main() {
     console.log("Message sent: %s", info.messageId);
 }
 
-main().catch;
+main().catch(console.error);
