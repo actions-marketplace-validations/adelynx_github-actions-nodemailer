@@ -8,6 +8,7 @@
 | **Version** | 1.0.0
 | **Updated** | 6<sup>th</sup> May 2021                                                                   
 | **Contacts** | Adel Kedjour - adel@kedjour.com
+| **Website** | [http://www.awidel.com][1]
 | **Description** | Github Actions to send email notifications using Nodemailer.   
 | **License** | The scripts and documentation in this project are released under the [MIT License][2] 
 
