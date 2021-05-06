@@ -9,14 +9,14 @@ LABEL "repository"="https://github.com/adelynx/github-actions-nodemailer"
 LABEL "homepage"="https://github.com/adelynx/github-actions-nodemailer"
 LABEL "maintainer"="Adel Kedjour <adel@kedjour.com>"
 
+COPY LICENSE README.md /
+
 COPY index.js /
 
 COPY package.json /package.json
 
 COPY entrypoint.sh /entrypoint.sh
 
-COPY LICENSE README.md /
-
-RUN yarn -v
+RUN chmod +x entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
