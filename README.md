@@ -3,7 +3,6 @@
 | **Title** | Github Actions Nodemailer                                            |  
 |:--------------------|:----------------------------------------------------------------------|  
 | **Created** | 6<sup>th</sup> May 2021    
-| **Project** | Websites                                   
 | **Author** | Adel Kedjour                                                                                                 
 | **Version** | [![GitHub version](https://badge.fury.io/gh/adelynx%2Fgithub-actions-nodemailer.svg)](https://badge.fury.io/gh/adelynx%2Fgithub-actions-nodemailer)
 | **Updated** | 6<sup>th</sup> May 2021                                                                   
